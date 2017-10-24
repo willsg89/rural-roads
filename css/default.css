@@ -1,0 +1,13 @@
+@font-face {
+    font-family: SprayMeFont;
+    src: url(sprayme.ttf);
+}
+
+body {
+    background-color: black;
+}
+
+.title {
+    color: white;
+    font-family: SprayMeFont;
+}
