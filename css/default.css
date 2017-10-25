@@ -1,13 +1,45 @@
 @font-face {
     font-family: SprayMeFont;
-    src: url(sprayme.ttf);
+    src: url(spray-me-webfont.ttf);
 }
 
 body {
     background-color: black;
+    padding-top: 5rem;
 }
 
 .title {
     color: white;
+    text-align: center;
     font-family: SprayMeFont;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+}
+
+h1.title  {
+	padding: 3rem;	
+}
+
+.social-bar {
+	height: 160px;
+}
+
+.logo {
+	width: 200px;
+	height: 200px;
+}
+
+.main {
+	padding-bottom: 5rem;
+}
+
+.about > p,
+.about > h4 { 
+	color: white;
+}
+
+.about > h4 { 
+	text-align: center;
 }
