@@ -1,11 +1,15 @@
 @font-face {
     font-family: SprayMeFont;
-    src: url(spray-me-webfont.ttf);
+    src: url(rural_logo_spray.ttf);
+}
+
+@font-face {
+    font-family: GunPlay;
+    src: url(gunplay\ rg.ttf);
 }
 
 body {
-    background-color: black;
-    padding-top: 5rem;
+    background-color: #222222;
 }
 
 .title {
@@ -19,7 +23,8 @@ body {
 }
 
 h1.title  {
-	padding: 3rem;	
+    padding: 3rem;
+    font-family: GunPlay;
 }
 
 .social-bar {
@@ -42,4 +47,13 @@ h1.title  {
 
 .about > h4 { 
 	text-align: center;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+footer > div > span,
+footer > div > a {
+    color: white;
 }
