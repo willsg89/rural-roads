@@ -65,3 +65,12 @@ typings/
 
 # End of https://www.gitignore.io/api/node
 package
+
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+
+
+# End of https://www.gitignore.io/api/visualstudiocode

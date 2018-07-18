@@ -8,8 +8,18 @@
     src: url(gunplay\ rg.ttf);
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: #222222;
+    padding-top: 74px;
+}
+
+.container.main {
+    margin-bottom: 100px;
 }
 
 .title {
@@ -22,38 +32,38 @@ body {
     font-size: xx-large;
 }
 
-h1.title  {
+h1.title {
     padding: 3rem;
     font-family: GunPlay;
 }
 
 .social-bar {
-	height: 160px;
+    height: 160px;
 }
 
 .logo {
-	width: 200px;
-	height: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .main {
-	padding-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
-.about > p,
-.about > h4 { 
-	color: white;
+.about>p, .about>h4 {
+    color: white;
 }
 
-.about > h4 { 
-	text-align: center;
+.about>h4 {
+    text-align: center;
 }
 
-footer {
-    margin-top: 100px;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-footer > div > span,
-footer > div > a {
+footer>div>span, footer>div>a {
     color: white;
 }
