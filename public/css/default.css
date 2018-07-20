@@ -67,3 +67,13 @@ h1.title {
 footer>div>span, footer>div>a {
     color: white;
 }
+
+.margin-15 {
+    margin: 15px;
+}
+
+.thumbnail-top-bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
