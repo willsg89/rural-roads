@@ -9,6 +9,10 @@ router.get('/tour', function(req, res, next) {
   res.render('tour', {active: 'tour'});
 });
 
+router.get('/about', function(req, res, next) {
+  res.render('about', {active: 'about'});
+});
+
 router.get('/photos', function(req, res, next) {
   res.render('photos', {active: 'photos'});
 });

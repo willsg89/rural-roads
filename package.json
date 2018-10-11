@@ -1,9 +1,10 @@
 {
-  "name": "rural-roads",
-  "version": "0.0.0",
+  "name": "rural-roads-site",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "debug": "nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.3",
@@ -14,5 +15,8 @@
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.2",
     "sharp": "~0.20.5"
+  },
+  "devDependencies": {
+    "nodemon": "~1.18.4"
   }
 }

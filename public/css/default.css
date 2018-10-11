@@ -64,8 +64,12 @@ h1.title {
     width: 100%;
 }
 
-footer>div>span, footer>div>a {
+footer>div>div>div>span {
     color: white;
+}
+
+footer>div>div>div>span, footer>div>div>div>a {
+    font-size: small;
 }
 
 .margin-15 {
