@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background: url("/images/IMG_0574.jpg") no-repeat center center fixed; 
+    background: url("/images/background.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,11 +23,22 @@ body {
 }
 
 nav {
-    background-color:rgba(52,58,64, 0.9);
+    background-color:rgba(232,175,16, 1);
+}
+
+a {
+    color: rgba(232,175,16, 1);
 }
 
 .container.main {
     margin-bottom: 100px;
+}
+
+.inner-content {
+    max-width: 740px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
 }
 
 .title {
