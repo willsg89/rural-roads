@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/default.css">
     <title>Rural Roads</title>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a data-scroll class="navbar-brand title" href="#">Rural Roads</a>
+        <div class="navbar-brand title">
+          <img class="logo" src="images/logo.svg"  alt="Rural Roads" >
+          Rural Roads
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <%- locals.active === 'main' ? 'active' : '' %>">
-              <a data-scroll class="nav-link" href="/#">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item <%- locals.active === 'about' ? 'active' : '' %>">
-              <a data-scroll class="nav-link" href="/about">Sobre a banda</a>
+              <a class="nav-link" href="/about">Sobre a banda</a>
             </li>
             <li class="nav-item <%- locals.active === 'contact' ? 'active' : '' %>">
-              <a data-scroll class="nav-link" href="/contact">Contato</a>
+              <a class="nav-link" href="/contact">Contato</a>
             </li>
-            <!-- <li class="nav-item <%- locals.active === 'photos' ? 'active' : '' %>">
-              <a data-scroll class="nav-link " href="/photos">Fotos</a>
-            </li>
-            <li class="nav-item <%- locals.active === 'videos' ? 'active' : '' %>">
-              <a data-scroll class="nav-link " href="/videos">Vídeos</a>
-            </li> -->
           </ul>
         </div>
       </nav>
       <div class="container main">
-        <!-- <img class="mx-auto d-block logo" src="images/logo.svg"  alt="Rural Roads" > -->
