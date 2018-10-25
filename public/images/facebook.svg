@@ -1,6 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" 
-    xmlns="http://www.w3.org/2000/svg" 
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path  d="M28.765,50.319h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.319z   M3,4h60v60H3V4z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#3A589B;"/>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="60" height="60" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.765 46.319H32.509V29.998H37.008L37.604 24.374H32.509L32.516 21.558C32.516 20.092 32.656 19.305 34.76 19.305H37.572V13.68H33.072C27.667 13.68 25.765 16.409 25.765 20.997V24.374H22.396V29.999H25.765V46.319V46.319ZM0 0H60V60H0V0Z" fill="#3A589B"/>
 </svg>

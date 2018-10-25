@@ -14,12 +14,14 @@ html {
 }
 
 body {
-    background: url("/images/background.jpg") no-repeat center center fixed; 
+    background: url("/images/background.jpg") ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: fixed;
     padding-top: 74px;
+    background-position-y: bottom;
+    background-position-x: center;
 }
 
 nav {
@@ -73,6 +75,13 @@ a.nav-link {
     padding-bottom: 5rem;
 }
 
+.about {
+    max-width: 600px;
+    /* padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; */
+}
+
 .about>p, .about>h4 {
     color: white;
 }
@@ -105,3 +114,11 @@ footer>div>div>div>span, footer>div>div>div>a {
     padding-bottom: 15px;
 }
 
+.fix-deezer {
+    max-width: 60px;
+}
+
+.bio-image {
+    margin-bottom: 30px; 
+    max-height: 300px;
+}
