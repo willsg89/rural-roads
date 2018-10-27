@@ -82,6 +82,13 @@ a.nav-link {
     margin: 0 auto; */
 }
 
+.invalid-feedback {
+    color: rgba(232,175,16, 1);
+}
+.was-validated .form-control:invalid {
+    border-color: rgba(232,175,16, 1);
+}
+
 .about>p, .about>h4 {
     color: white;
 }
@@ -120,5 +127,5 @@ footer>div>div>div>span, footer>div>div>div>a {
 
 .bio-image {
     margin-bottom: 30px; 
-    max-height: 300px;
+    max-width: 300px;
 }

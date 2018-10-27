@@ -3,35 +3,87 @@
     <h1 class="title col-lg-12">CONTATO</h1>
 
     <div class="inner-content about">
+
+        <% if (locals.sent) { %>        
+            <h3 style="color: rgba(232,175,16, 1);">Contato recebido, em breve retornaremos.</h3 style="color: rgba(232,175,16, 1);">
+        <% } else { %>        
+
         <p style="color:white">Entre em contato conosco através do email:</p>
-        <a href="mailto:ruralroadsband@gmail.com">
-            <p>ruralroadsband@gmail.com</p>
+        <a href="mailto:ruralroadsbanda@gmail.com">
+            <p>ruralroadsbanda@gmail.com</p>
         </a>
         <br />
         <p style="color:white">Ou preencha o formulário:</p>
-        <form method="POST" action="/contact/send">
+        <form id="sxx" method="POST" action="/contact" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="name" style="color:white" >Nome:</label>
-                <input type="text" required="required" class="form-control form-control-sm col-lg-12 col-12" id="name" aria-describedby="emailHelp" >
+                <input type="text"
+                       required="required" 
+                       class=" form-control form-control-sm col-lg-12 col-12" 
+                       name="name"
+                       id="name"  >
+                <div class="invalid-feedback">
+                    Informe seu nome.
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="telephone" style="color:white" > Telefone:</label>
-                <input type="tel" class="form-control form-control-sm col-lg-6 col-sm-12" id="telephone" aria-describedby="emailHelp">
+                <input type="tel"
+                       class="form-control form-control-sm col-lg-6 col-sm-12"
+                       id="telephone"
+                       name="telephone">
+                <div class="invalid-feedback">
+                    Informe um telefone válido.
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="email" style="color:white" >Email:</label>
-                <input type="email" class="form-control form-control-sm col-lg-12 col-sm-12" id="email" aria-describedby="emailHelp" >
+                <input type="email" 
+                       class="form-control form-control-sm  col-lg-12 col-sm-12"
+                       id="email"
+                       name="email">
+                <div class="invalid-feedback">
+                    Informe um email válido.
+                </div>
             </div>
             <div class="form-group">
                 <label for="message" style="color:white" >Mensagem:</label>
-                <textarea required="required" class="form-control form-control-sm col-lg-12 col-sm-12" id="message" rows="5"></textarea>
+                <textarea required="required"
+                          class="form-control form-control-sm col-lg-12 col-sm-12"
+                          id="message"
+                          name="message"
+                          rows="5"></textarea>
+                <div class="invalid-feedback">
+                    Escreva uma mensagem.
+                </div>
             </div>
-                <button type="submit" style="margin-right:10px;" class="btn btn-outline-warning">Enviar</button>
-                <button type="button" class="btn btn-outline-secondary">Limpar</button>
+                <button type="submit" form="sxx" style="margin-right:10px;" class="btn btn-outline-warning">Enviar</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
         </form>
+        <% }  %>        
     </div>
 
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
 
 <%- include('footer') %>
