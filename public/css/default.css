@@ -14,14 +14,17 @@ html {
 }
 
 body {
-    background: url("/images/background.jpg") ; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: fixed;
+    background: url("/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
     padding-top: 74px;
-    background-position-y: bottom;
-    background-position-x: center;
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        background: url("/images/back-mob.jpg")  no-repeat center center fixed; ;
+        padding-top: 74px;
+        background-size: cover;
+    }
 }
 
 nav {
