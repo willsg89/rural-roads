@@ -17,6 +17,8 @@ body {
     background: url("/images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     padding-top: 74px;
+    font-family: monospace;
+    font-size: larger;
 }
 
 @media screen and (max-width: 720px) {
@@ -57,7 +59,8 @@ a {
 }
 
 h1.title {
-    padding: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     font-family: GunPlay;
 }
 
@@ -131,4 +134,13 @@ footer>div>div>div>span, footer>div>div>div>a {
 .bio-image {
     margin-bottom: 30px; 
     max-width: 300px;
+}
+
+.atual-image {
+    margin-bottom: 30px; 
+    max-width: 500px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
