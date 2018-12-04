@@ -17,7 +17,7 @@ body {
     background: url("/images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     padding-top: 74px;
-    font-family: monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: larger;
 }
 
@@ -26,6 +26,8 @@ body {
         background: url("/images/back-mob.jpg")  no-repeat center center fixed; ;
         padding-top: 74px;
         background-size: cover;
+        font-family: 'Roboto', sans-serif;
+        font-size: larger;
     }
 }
 
@@ -134,6 +136,10 @@ footer>div>div>div>span, footer>div>div>div>a {
 .bio-image {
     margin-bottom: 30px; 
     max-width: 300px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .atual-image {
