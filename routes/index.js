@@ -5,21 +5,25 @@ router.get('/', function(req, res, next) {
   res.render('main', {active: 'main'});
 });
 
-router.get('/tour', function(req, res, next) {
-  res.render('tour', {active: 'tour'});
-});
-
 router.get('/about', function(req, res, next) {
   res.render('about', {active: 'about'});
 });
 
-router.get('/photos', function(req, res, next) {
-  res.render('photos', {active: 'photos'});
-});
+// router.get('/tour', function(req, res, next) {
+//   res.render('tour', {active: 'tour'});
+// });
 
-router.get('/videos', function(req, res, next) {
-  res.render('videos', {active: 'videos'});
-});
+// router.get('/about', function(req, res, next) {
+//   res.render('about', {active: 'about'});
+// });
+
+// router.get('/photos', function(req, res, next) {
+//   res.render('photos', {active: 'photos'});
+// });
+
+// router.get('/videos', function(req, res, next) {
+//   res.render('videos', {active: 'videos'});
+// });
 
 router.get('/contact', function(req, res, next) {
   res.render('contact', {active: 'contact'});
