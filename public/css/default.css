@@ -1,11 +1,11 @@
 @font-face {
     font-family: SprayMeFont;
-    src: url(rural_logo_spray.ttf);
+    src: url(https://raw.githubusercontent.com/willsg89/rural-roads/master/public/css/rural_logo_spray.ttf);
 }
 
 @font-face {
     font-family: GunPlay;
-    src: url(gunplay\ rg.ttf);
+    src: url(https://raw.githubusercontent.com/willsg89/rural-roads/master/public/css/gunplay%20rg.ttf);
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background: url("/images/background.jpg") no-repeat center center fixed;
+    background: url("https://raw.githubusercontent.com/willsg89/rural-roads/master/public/images/background.jpg") no-repeat center center fixed;
     background-size: cover;
     padding-top: 74px;
     font-family: 'Roboto', sans-serif;
@@ -23,7 +23,7 @@ body {
 
 @media screen and (max-width: 720px) {
     body {
-        background: url("/images/back-mob.jpg")  no-repeat center center fixed; ;
+        background: url("https://raw.githubusercontent.com/willsg89/rural-roads/master/public/images/back-mob.jpg")  no-repeat center center fixed; ;
         padding-top: 74px;
         background-size: cover;
         font-family: 'Roboto', sans-serif;
