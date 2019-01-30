@@ -1,66 +1,66 @@
 <%- include('header') %>
 
-    <h1 class="title col-lg-12">CONTATO</h1>
+    <h1 class="title col-lg-12"><%= __('contact.title') %></h1>
 
     <div class="inner-content about">
 
         <% if (locals.sent) { %>        
-            <h3 style="color: rgba(232,175,16, 1);">Contato recebido, em breve retornaremos.</h3 style="color: rgba(232,175,16, 1);">
+            <h3 style="color: rgba(232,175,16, 1);"><%= __('contact.msg.received') %></h3 style="color: rgba(232,175,16, 1);">
         <% } else { %>        
 
-        <p style="color:white">Entre em contato conosco através do email:</p>
+        <p style="color:white"><%= __('contact.contact.us.email') %></p>
         <a href="mailto:ruralroadsbanda@gmail.com">
             <p>ruralroadsbanda@gmail.com</p>
         </a>
         <br />
-        <p style="color:white">Ou preencha o formulário:</p>
+        <p style="color:white"><%= __('contact.or.fill.form') %></p>
         <form id="sxx" method="POST" action="/contact" class="needs-validation" novalidate>
             <div class="form-group">
-                <label for="name" style="color:white" >Nome:</label>
+                <label for="name" style="color:white" ><%= __('contact.name') %></label>
                 <input type="text"
                        required="required" 
                        class=" form-control form-control-sm col-lg-12 col-12" 
                        name="name"
                        id="name"  >
                 <div class="invalid-feedback">
-                    Informe seu nome.
+                    <%= __('contact.name.required') %>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="telephone" style="color:white" > Telefone:</label>
+                <label for="telephone" style="color:white" ><%= __('contact.phone') %></label>
                 <input type="tel"
                        class="form-control form-control-sm col-lg-6 col-sm-12"
                        id="telephone"
                        name="telephone">
                 <div class="invalid-feedback">
-                    Informe um telefone válido.
+                    <%= __('contact.phone.invalid') %>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="email" style="color:white" >Email:</label>
+                <label for="email" style="color:white" ><%= __('contact.email') %></label>
                 <input type="email" 
                        class="form-control form-control-sm  col-lg-12 col-sm-12"
                        id="email"
                        name="email">
                 <div class="invalid-feedback">
-                    Informe um email válido.
+                    <%= __('contact.email.invalid') %>
                 </div>
             </div>
             <div class="form-group">
-                <label for="message" style="color:white" >Mensagem:</label>
+                <label for="message" style="color:white" ><%= __('contact.message') %></label>
                 <textarea required="required"
                           class="form-control form-control-sm col-lg-12 col-sm-12"
                           id="message"
                           name="message"
                           rows="5"></textarea>
                 <div class="invalid-feedback">
-                    Escreva uma mensagem.
+                    <%= __('contact.message.required') %>
                 </div>
             </div>
-                <button type="submit" form="sxx" style="margin-right:10px;" class="btn btn-outline-warning">Enviar</button>
-                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                <button type="submit" style="margin-right:10px;" class="btn btn-outline-warning"><%= __('contact.bt.send') %></button>
+                <button type="reset" class="btn btn-outline-secondary"><%= __('contact.bt.clean') %></button>
         </form>
         <% }  %>        
     </div>

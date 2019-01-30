@@ -5,22 +5,30 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const compression = require('compression')
+const i18n = require("i18n");
 
 const routesIndex = require('./routes/index');
 
 const app = express();
+
+i18n.configure({
+  locales: ['pt'],
+  defaultLocale: 'en',
+  cookie: 'ruralroads-site-lang',
+  directory: './locales'
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(compression())
-// uncomment after placing your favicon in /public
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(i18n.init);
 
 app.use('/', routesIndex);
 

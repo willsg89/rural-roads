@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+router.get('/lang', function(req, res, next) {
+  res.cookie('ruralroads-site-lang', req.query.lang);
+  res.redirect('/');
+});
+
 router.get('/', function(req, res, next) {
   res.render('main', {active: 'main'});
 });
