@@ -3,15 +3,16 @@ var router = express.Router();
 
 router.get('/lang', function(req, res, next) {
   res.cookie('ruralroads-site-lang', req.query.lang);
+
   res.redirect('/');
 });
 
 router.get('/', function(req, res, next) {
-  res.render('main', {active: 'main'});
+  res.render('main', {active: 'main', language: req.cookies['ruralroads-site-lang']});
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', {active: 'about'});
+  res.render('about', {active: 'about', language: req.cookies['ruralroads-site-lang']});
 });
 
 // router.get('/tour', function(req, res, next) {
@@ -31,7 +32,7 @@ router.get('/about', function(req, res, next) {
 // });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', {active: 'contact'});
+  res.render('contact', {active: 'contact', language: req.cookies['ruralroads-site-lang']});
 });
 
 router.post('/contact', function(req, res, next) {
