@@ -8,11 +8,11 @@ router.get('/lang', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-  res.render('main', {active: 'main', language: req.cookies['ruralroads-site-lang']});
+  res.render('main', {active: 'main', language: getLang(req)});
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', {active: 'about', language: req.cookies['ruralroads-site-lang']});
+  res.render('about', {active: 'about', language: getLang(req)});
 });
 
 // router.get('/tour', function(req, res, next) {
@@ -32,8 +32,21 @@ router.get('/about', function(req, res, next) {
 // });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', {active: 'contact', language: req.cookies['ruralroads-site-lang']});
+  res.render('contact', {active: 'contact', language: getLang(req)});
 });
+
+function getLang(req) {
+  if (req.cookies['ruralroads-site-lang']) {
+    return req.cookies['ruralroads-site-lang']
+  } else {
+    const langs = req.headers["accept-language"]
+    if (langs && (typeof langs === 'string')) {
+      const langsSplit = langs.split(";")
+      return langsSplit[0].includes("pt") ? "pt" : "en"
+    }
+    return "en"
+  }
+}
 
 router.post('/contact', function(req, res, next) {
 
