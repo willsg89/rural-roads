@@ -3,6 +3,7 @@
 <div class="row">
     <h1 class="title col-lg-12">AGENDA</h1>
 
+    <% if (locals.tourDates && locals.tourDates.length) { %>
     <table class="table table-striped table-dark">
         <thead>
           <tr>
@@ -13,26 +14,19 @@
           </tr>
         </thead>
         <tbody>
+          <% locals.tourDates.forEach( function(tourDate) { %>
           <tr>
-            <td>15/05/2018</td>
-            <td>Rural Roads + Anthrax</td>
-            <td>Opinião</td>
-            <td><a href="https://www.facebook.com" target="_blank" >Ir</a></td>
+            <td class="dateDDMMYYYY"><%- tourDate.date %></td>
+            <td><%- tourDate.event %></td>
+            <td><%- tourDate.local %></td>
+            <td><a href="<%- tourDate.link %>" target="_blank" >Ir</a></td>
           </tr>
-          <tr>
-            <td>20/06/2018</td>
-            <td>Rural Roads + Ozzy</td>
-            <td>Gigantinho</td>
-            <td><a href="https://www.facebook.com" target="_blank" >Ir</a></td>
-          </tr>
-          <tr>
-            <td>25/07/2018</td>
-            <td>Rural Roads + Iron Maiden</td>
-            <td>Estádio Beira-rio</td>
-            <td><a href="https://www.facebook.com" target="_blank" >Ir</a></td>
-          </tr>
+          <% }); %>
         </tbody>
       </table>
+    <% } else { %>
+      sem datas cadastradas
+    <% } %>
 </div>
 
 <%- include('footer') %>

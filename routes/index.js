@@ -16,7 +16,8 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/tour', function(req, res, next) {
-  res.render('tour', {active: 'tour', language: getLang(req)});
+  const tourDates = require('./tour-dates.json')
+  res.render('tour', {active: 'tour', language: getLang(req), tourDates: tourDates});
 });
 
 router.get('/photos', function(req, res, next) {
