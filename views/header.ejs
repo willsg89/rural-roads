@@ -34,8 +34,16 @@
             <li class="nav-item <%- locals.active === 'tour' ? 'active' : '' %>">
               <a class="nav-link" href="/tour"><%= __('menu.tour') %></a>
             </li>
-            <li class="nav-item <%- locals.active === 'videos' ? 'active' : '' %>">
-              <a class="nav-link" href="/videos"><%= __('menu.videos') %></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" 
+                 data-toggle="dropdown" 
+                 role="button" aria-haspopup="true" aria-expanded="false"
+                 href="#" 
+                 ><%= __('menu.multimedia') %></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/photos"><%= __('menu.photos') %></a>
+                <a class="dropdown-item" href="/videos"><%= __('menu.videos') %></a>
+              </div>
             </li>
           </ul>
           <ul class="navbar-nav">

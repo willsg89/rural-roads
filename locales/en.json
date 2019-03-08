@@ -4,6 +4,8 @@
 	"menu.contact": "Contact",
 	"menu.videos": "Videos",
 	"menu.tour": "Tour",
+	"menu.photos": "Photos",
+	"menu.multimedia": "Multimedia",
 	"footer.copyright": "© Copyright William Guimarães and Rural Roads 2018.",
 	"home.new.album": "NEW ALBUM",
 	"home.available": "AVAILABLE!",
@@ -44,5 +46,6 @@
 	"about.single.ride.album": "On October 31, 2018, they release their first single accompanied by a lyric video, \"Ride\", as a preview of their first album. The complete album is then released on several digital music platforms on November 29, 2018, featuring \"Ride\" and 12 other original tracks.",
 	"videos.title": "VIDEOS",
 	"videos.ride.desc": "Official lyric video for the song \"Ride\", from the album \"Rural Roads\" (2018).",
-	"videos.album.desc": "Rural Roads' full debut album!"
+	"videos.album.desc": "Rural Roads' full debut album!",
+	"photos.title": "PHOTOS"
 }
