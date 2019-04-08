@@ -1,0 +1,26 @@
+@font-face {
+  font-family: SprayMeFont;
+  src: url("rural_logo_spray.ttf");
+}
+
+body {
+  /* margin: 0; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  font-family: 'Roboto', sans-serif !important;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-size: larger !important;
+  color: white !important;
+  background-color: black !important;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-family: 'Roboto', sans-serif !important;
+    background: url("images/back-mob.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-size: larger;
+    background-color: black !important;
+  }
+}
