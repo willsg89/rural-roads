@@ -125,6 +125,10 @@ footer>div>div>div>span, footer>div>div>div>a {
     margin-right: 15px;
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
+
 .thumbnail-top-bottom {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -135,7 +139,7 @@ footer>div>div>div>span, footer>div>div>div>a {
 }
 
 .bio-image {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     max-width: 300px;
     width: 100%;
     display: block;
@@ -144,7 +148,7 @@ footer>div>div>div>span, footer>div>div>div>a {
 }
 
 .atual-image {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     max-width: 500px;
     width: 100%;
     display: block;

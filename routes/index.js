@@ -27,9 +27,9 @@ router.get('/about', function(req, res, next) {
 //   res.render('photos', {active: 'photos'});
 // });
 
-// router.get('/videos', function(req, res, next) {
-//   res.render('videos', {active: 'videos'});
-// });
+router.get('/videos', function(req, res, next) {
+  res.render('videos', {active: 'videos', language: getLang(req)});
+});
 
 router.get('/contact', function(req, res, next) {
   res.render('contact', {active: 'contact', language: getLang(req)});
