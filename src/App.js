@@ -1,34 +1,48 @@
-
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import { LinkContainer } from 'react-router-bootstrap'
+import { Navbar, NavDropdown, Nav } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 import { useTranslation } from "react-i18next";
 
-import Home from 'views/main'
-import Videos from 'views/videos'
-import Contact from 'views/contact'
-import About from 'views/about'
-import Container from 'components/Container';
+import Home from "views/main";
+import VideosLyric from "views/videosLyric";
+import VideosQuarantine from "views/videosQuarantine";
+import VideosAnniversary from "views/videosAnniversary";
+import Contact from "views/contact";
+import About from "views/about";
+import Container from "components/Container";
 
-import styled from 'styled-components';
-import i18n from 'i18nConfig';
+import styled from "styled-components";
+import i18n from "i18nConfig";
 import firebase from "firebase/app";
 
 const StyledNavbar = styled(Navbar)`
   background-color: #e8af10;
-  font-family: 'Gunplay', sans-serif;
+  font-family: "Gunplay", sans-serif;
   font-size: large;
 `;
 
 const StyledBrand = styled(Navbar.Brand)`
-  font-family: SprayMeFont, 'Gunplay', sans-serif;
+  font-family: SprayMeFont, "Gunplay", sans-serif;
   font-size: xx-large;
   padding: 0;
+`;
+
+const StyledNavDropdown  = styled(NavDropdown)`
+  .dropdown-menu {
+    background-color: #e8af10;
+  }
+`;
+
+const StyledNavDropdownItem  = styled(NavDropdown.Item)`
+  &.active {
+    color: unset;
+    background-color: unset;
+  }
+  color: rgba(0,0,0,.5);
+  &:hover {
+    color: black;
+    background-color: #e8af10;
+  }
 `;
 
 const BrandImg = styled.img`
@@ -40,16 +54,16 @@ const BrandImg = styled.img`
 const changeLanguage = (lng) => {
   i18n.changeLanguage(lng);
   firebase.analytics().logEvent(`change_language_to_${lng}`);
-}
+};
 
 function App() {
   const { t } = useTranslation();
 
   return (
     <Router>
-      <StyledNavbar expand="md" fixed="top" collapseOnSelect >
-        <LinkContainer exact  to="/">
-          <StyledBrand >
+      <StyledNavbar expand="md" fixed="top" collapseOnSelect>
+        <LinkContainer exact to="/">
+          <StyledBrand>
             <BrandImg src="/images/logo.svg" alt="" />
             RURAL ROADS
           </StyledBrand>
@@ -59,26 +73,39 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <LinkContainer exact to="/">
-              <Nav.Link active={false} >Home</Nav.Link>
+              <Nav.Link active={false}>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer exact to="/about">
-              <Nav.Link active={false} > {t('menu.about')}</Nav.Link>
-            </LinkContainer>
-            <LinkContainer exact to="/videos">
-              <Nav.Link active={false} > {t('menu.videos')}</Nav.Link>
-            </LinkContainer>
-            <LinkContainer exact to="/contact">
-              <Nav.Link active={false} > {t('menu.contact')}</Nav.Link>
+              <Nav.Link active={false}> {t("menu.about")}</Nav.Link>
             </LinkContainer>
 
+            <StyledNavDropdown title={t("menu.videos")} id="basic-nav-dropdown">
+              <LinkContainer exact to="/videos-lyric">
+                <StyledNavDropdownItem active={false} >{t("menu.videos.lyric")} </StyledNavDropdownItem>
+              </LinkContainer>
+              <LinkContainer exact to="/videos-quarantine">
+                <StyledNavDropdownItem active={false} >{t("menu.videos.quarantine")} </StyledNavDropdownItem>
+              </LinkContainer>
+              <LinkContainer exact to="/videos-anniversary">
+                <StyledNavDropdownItem active={false} >{t("menu.videos.anniversary")} </StyledNavDropdownItem>
+              </LinkContainer>
+            </StyledNavDropdown>
+            <LinkContainer exact to="/contact">
+              <Nav.Link active={false}> {t("menu.contact")}</Nav.Link>
+            </LinkContainer>
           </Nav>
           <Nav>
             <Nav.Link></Nav.Link>
-            {i18n.language.split("-").[0] !== 'pt' ? <Nav.Link  onClick={() => changeLanguage('pt')}>Português</Nav.Link> : null}
-            {i18n.language.split("-").[0] === 'pt' ? <Nav.Link  onClick={() => changeLanguage('en')}>English</Nav.Link> : null}
+            {i18n.language.split("-")[0] !== "pt" ? (
+              <Nav.Link onClick={() => changeLanguage("pt")}>
+                Português
+              </Nav.Link>
+            ) : null}
+            {i18n.language.split("-")[0] === "pt" ? (
+              <Nav.Link onClick={() => changeLanguage("en")}>English</Nav.Link>
+            ) : null}
           </Nav>
         </Navbar.Collapse>
-
       </StyledNavbar>
 
       <Container>
@@ -86,8 +113,14 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/videos">
-            <Videos />
+          <Route path="/videos-lyric">
+            <VideosLyric />
+          </Route>
+          <Route path="/videos-quarantine">
+            <VideosQuarantine />
+          </Route>
+          <Route path="/videos-anniversary">
+            <VideosAnniversary />
           </Route>
           <Route path="/contact">
             <Contact />
@@ -97,7 +130,6 @@ function App() {
           </Route>
         </Switch>
       </Container>
-
     </Router>
   );
 }
