@@ -45,7 +45,6 @@ function About() {
         <p>{t('about.heavy.band')}</p>
         <AtualImage src="images/biografia/6.jpg" className="img-fluid" alt="" />
         <p>{t('about.formiga')}<br />
-          {t('about.bu')}<br />
           {t('about.gian')}<br />
           {t('about.will')}<br />
         </p>

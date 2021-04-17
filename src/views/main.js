@@ -21,7 +21,7 @@ function Main() {
     <Row>
 
       <Col lg="6" xs={{ span: 12, order: 1 }}>
-        <Title>{t('home.new.album')}<br />{t('home.available')}</Title>
+        <Title>{t('home.album')}<br />{t('home.available')}</Title>
         <a onClick={() => firebase.analytics().logEvent('main_album_click')} href="https://open.spotify.com/artist/0Hjg5nGXnQ561j4Wm444D5" target="_blank" rel="noreferrer" >
           <AlbumImg className="mx-auto d-block" src="images/album-small.png" alt="" />
         </a>
