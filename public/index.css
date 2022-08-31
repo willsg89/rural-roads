@@ -18,7 +18,7 @@ body {
 @media screen and (max-width: 720px) {
   body {
     font-family: 'Roboto', sans-serif !important;
-    background: url("images/back-mob.jpg") no-repeat center center fixed;
+    /* background: url("images/back-mob.jpg") no-repeat center center fixed; */
     background-size: cover;
     font-size: larger;
     background-color: black !important;

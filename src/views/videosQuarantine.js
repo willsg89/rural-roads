@@ -11,8 +11,6 @@ const videos = [
     src: "https://www.youtube.com/embed/QaN-e8D0t8c",
   },
   { title: "video-shortcut", src: "https://www.youtube.com/embed/9qB2ZrSvJDk" },
-  { title: "video-hold", src: "https://www.youtube.com/embed/2Uwv7WZXLjA" },
-  { title: "video-start", src: "https://www.youtube.com/embed/zxp5rAgUOj0" },
 ];
 
 function VideosQuarantine() {
