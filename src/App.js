@@ -24,7 +24,7 @@ const StyledNavbar = styled(Navbar)`
   
 const StyledBrand = styled(Navbar.Brand)`
 font-family: "Gunplay", sans-serif;
-font-size: large;
+text-shadow: 2px 2px #000000;
 padding: 0;
 display: flex;
 align-items: center;
