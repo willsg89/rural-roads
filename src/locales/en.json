@@ -3,6 +3,7 @@
 	"menu.about": "About the band",
 	"menu.contact": "Contact",
 	"menu.videos": "Videos",
+	"menu.videos.farm": "Farm Sessions",
 	"menu.videos.lyric": "Lyric videos",
 	"menu.videos.quarantine": "Quarantine sessions",
 	"menu.videos.anniversary": "Anniversary talk",
@@ -31,5 +32,6 @@
 	"about.will.guitar": "Will completes the guitar team in the middle of the year, intensifying the creative process.",
 	"about.between.2013.2015": "Between 2013 and 2015, they participate in several shows and festivals, and a demo with seven songs is recorded in 2014, produced by the members themselves.",
 	"about.papao.exit": "Papão decides to leave the band in 2015, and Mauricio Tessmer becomes the new drummer. With him, the first album is recorded, under production of Sebastian Carsin at Estudio Hurricane (Porto Alegre, Brazil), containing new songs as well as new versions of the compositions of the 2014 demo.",
-	"about.single.ride.album": "On October 31, 2018, they release their first single accompanied by a lyric video, \"Ride\", as a preview of their first album. The complete album is then released on several digital music platforms on November 29, 2018 (with a physical release in the following year), featuring \"Ride\" and 12 other original tracks."
+	"about.single.ride.album": "On October 31, 2018, they release their first single accompanied by a lyric video, \"Ride\", as a preview of their first album. The complete album is then released on several digital music platforms on November 29, 2018 (with a physical release in the following year), featuring \"Ride\" and 12 other original tracks.",
+	"about.covid": "In times of a pandemic, the band remains in social isolation, producing content such as quarantine-style videos, where each member plays their part separately."
 }

@@ -78,6 +78,9 @@ function About() {
 
         <p>{t('about.single.ride.album')}</p>
         <AtualImage src="images/biografia/7.jpg" className="img-fluid" alt="" />
+
+        <p>{t('about.covid')}</p>
+
       </InnerAbout>
 
     </ContainerAbout>

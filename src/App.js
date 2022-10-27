@@ -7,6 +7,7 @@ import Home from "views/main";
 import VideosLyric from "views/videosLyric";
 import VideosQuarantine from "views/videosQuarantine";
 import VideosAnniversary from "views/videosAnniversary";
+import VideosFarm from "views/videosFarmSession";
 import Contact from "views/contact";
 import About from "views/about";
 import Container from "components/Container";
@@ -16,39 +17,76 @@ import i18n from "i18nConfig";
 import firebase from "firebase/app";
 
 const StyledNavbar = styled(Navbar)`
-  background-color: #e8af10;
+  background-color: #2e2e2e;
   font-family: "Gunplay", sans-serif;
   font-size: large;
 `;
-
+  
 const StyledBrand = styled(Navbar.Brand)`
-  font-family: SprayMeFont, "Gunplay", sans-serif;
-  font-size: xx-large;
-  padding: 0;
+font-family: "Gunplay", sans-serif;
+text-shadow: 2px 2px #000000;
+padding: 0;
+display: flex;
+align-items: center;
+color: rgba(181,26,1,1) !important;
+&.active {
+  
+}
 `;
 
 const StyledNavDropdown  = styled(NavDropdown)`
-  .dropdown-menu {
-    background-color: #e8af10;
-  }
+.dropdown-menu {
+  background-color: #2e2e2e;
+}
+.nav-link {
+  color: rgba(255,255,255, 0.8) !important;
+}
+&:hover .dropdown-toggle {
+  color: rgba(255,255,255) !important;
+}
 `;
+
+const StyledNavLink  = styled(Nav.Link)`
+&.nav-link {
+  color: rgba(255,255,255, 0.8) !important;
+}
+&:hover.nav-link {
+  color: rgba(255,255,255) !important;
+}
+&.active {
+  color: rgba(255,255,255) !important;
+}
+`;
+
+// const StyledLinkContainer  = styled(LinkContainer)`
+//   .active {
+//     color: green !important;
+//   }
+// `;
 
 const StyledNavDropdownItem  = styled(NavDropdown.Item)`
   &.active {
-    color: unset;
+    color: rgba(255,255,255);
     background-color: unset;
   }
-  color: rgba(0,0,0,.5);
+  color: rgba(255,255,255, 0.8);
   &:hover {
-    color: black;
-    background-color: #e8af10;
+    color: rgba(255,255,255);
+    background-color: unset;
   }
+`;
+
+const StyledNavBarToggle  = styled(Navbar.Toggle)`
+border-color: rgba(255,255,255, 0.9) !important;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 `;
 
 const BrandImg = styled.img`
   margin-right: 5px;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 `;
 
 const changeLanguage = (lng) => {
@@ -64,22 +102,25 @@ function App() {
       <StyledNavbar expand="md" fixed="top" collapseOnSelect>
         <LinkContainer exact to="/">
           <StyledBrand>
-            <BrandImg src="/images/logo.svg" alt="" />
+            <BrandImg src="/logo76.png" alt="" />
             RURAL ROADS
           </StyledBrand>
         </LinkContainer>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <StyledNavBarToggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <LinkContainer exact to="/">
-              <Nav.Link active={false}>Home</Nav.Link>
+              <StyledNavLink active={false}>Home</StyledNavLink>
             </LinkContainer>
             <LinkContainer exact to="/about">
-              <Nav.Link active={false}> {t("menu.about")}</Nav.Link>
+              <StyledNavLink active={false}> {t("menu.about")}</StyledNavLink>
             </LinkContainer>
 
             <StyledNavDropdown title={t("menu.videos")} id="basic-nav-dropdown">
+              <LinkContainer exact to="/videos-farm">
+                <StyledNavDropdownItem active={false} >{t("menu.videos.farm")} </StyledNavDropdownItem>
+              </LinkContainer>
               <LinkContainer exact to="/videos-lyric">
                 <StyledNavDropdownItem active={false} >{t("menu.videos.lyric")} </StyledNavDropdownItem>
               </LinkContainer>
@@ -91,18 +132,18 @@ function App() {
               </LinkContainer>
             </StyledNavDropdown>
             <LinkContainer exact to="/contact">
-              <Nav.Link active={false}> {t("menu.contact")}</Nav.Link>
+              <StyledNavLink active={false}> {t("menu.contact")}</StyledNavLink>
             </LinkContainer>
           </Nav>
           <Nav>
-            <Nav.Link></Nav.Link>
+            <StyledNavLink></StyledNavLink>
             {i18n.language.split("-")[0] !== "pt" ? (
-              <Nav.Link onClick={() => changeLanguage("pt")}>
+              <StyledNavLink onClick={() => changeLanguage("pt")}>
                 Português
-              </Nav.Link>
+              </StyledNavLink>
             ) : null}
             {i18n.language.split("-")[0] === "pt" ? (
-              <Nav.Link onClick={() => changeLanguage("en")}>English</Nav.Link>
+              <StyledNavLink onClick={() => changeLanguage("en")}>English</StyledNavLink>
             ) : null}
           </Nav>
         </Navbar.Collapse>
@@ -112,6 +153,9 @@ function App() {
         <Switch>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/videos-farm">
+            <VideosFarm />
           </Route>
           <Route path="/videos-lyric">
             <VideosLyric />

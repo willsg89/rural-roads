@@ -28,8 +28,8 @@ function Main() {
       </Col>
 
       <Col lg={{ span: 6, order: 2 }} xs={{ span: 12, order: 3 }}>
-        <Title>NO TIME TO REALIZE IT<br />(LYRIC VIDEO)</Title>
-        <Video onClick={() => firebase.analytics().logEvent('main_video_click')} title="home-video" src="https://www.youtube.com/embed/NPbG0mfpLa0" />
+        <Title>FARM SESSIONS<br />(Live in Studio)</Title>
+        <Video onClick={() => firebase.analytics().logEvent('main_video_click')} title="home-video" src="https://www.youtube.com/embed/N2QA7LpNPkY" />
       </Col>
 
       <Col lg={{ span: 6, order: 3 }} xs={{ span: 12, order: 2 }}>

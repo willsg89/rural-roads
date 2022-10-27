@@ -38,6 +38,7 @@ const ContainerAbout = styled.div`
 
 const LinkRR = styled.a`
   color: #d3d805;
+  // color: #e84c10;
 `;
 
 function Contact() {
