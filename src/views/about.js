@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useTranslation } from "react-i18next";
-import Title from 'components/Title';
-import firebase from "firebase/app";
+import Title from '../components/Title';
+import { analytics, logEvent } from '../firebaseConfig';
 
 const BioImage = styled.img`
   margin-bottom: 30px;
@@ -33,7 +33,7 @@ const InnerAbout = styled.div`
 `;
 
 function About() {
-  firebase.analytics().logEvent('about_load');
+  logEvent(analytics, 'about_load');
 
   const { t } = useTranslation();
 
@@ -88,6 +88,3 @@ function About() {
 }
 
 export default About;
-
-
-

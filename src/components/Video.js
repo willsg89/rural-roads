@@ -5,10 +5,9 @@ const Video = styled.div`
 `;
 
 const VideoFunc = ({mb, title, src, onClick}) => {
-
-    return (<Video onClick={() => {console.log("sdsss"); onClick();}} className="embed-responsive embed-responsive-16by9" mb={mb}>
-        <iframe title={title} className="embed-responsive-item" src={src} allowFullScreen></iframe>
+    return (<Video onClick={() => { onClick(); }} className="ratio ratio-16x9" mb={mb}>
+        <iframe title={title} src={src} allowFullScreen></iframe>
     </Video>);
 }
 
-export default  VideoFunc;
+export default VideoFunc;

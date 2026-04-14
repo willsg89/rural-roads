@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import Title from 'components/Title';
+import Title from '../components/Title';
 import styled from 'styled-components';
-import firebase from "firebase/app";
+import { analytics, logEvent } from '../firebaseConfig';
 
 const SocialImg = styled.img`
   height: 40px;
@@ -38,12 +38,11 @@ const ContainerAbout = styled.div`
 
 const LinkRR = styled.a`
   color: #d3d805;
-  // color: #e84c10;
 `;
 
 function Contact() {
     const { t } = useTranslation();
-    firebase.analytics().logEvent('contact_load');
+    logEvent(analytics, 'contact_load');
 
     return (
         <ContainerAbout>
@@ -54,7 +53,7 @@ function Contact() {
 
                 <Div30>
                     <Text>{t('contact.email')}</Text>
-                    <LinkRR onClick={() => firebase.analytics().logEvent('contact_mail_click')} href="mailto:ruralroadsbanda@gmail.com">
+                    <LinkRR onClick={() => logEvent(analytics, 'contact_mail_click')} href="mailto:ruralroadsbanda@gmail.com">
                         ruralroadsbanda@gmail.com
                     </LinkRR>
                 </Div30>
@@ -62,10 +61,10 @@ function Contact() {
                 <Div30>
                     <Text>{t('contact.social')}</Text>
                     <DivSocial>
-                        <LinkMargin onClick={() => firebase.analytics().logEvent('contact_facebook_click')} href="https://facebook.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
+                        <LinkMargin onClick={() => logEvent(analytics, 'contact_facebook_click')} href="https://facebook.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
                             <SocialImg className="mx-auto d-block" src="images/facebook.svg?sanitize=true" alt="Facebook" />
                         </LinkMargin>
-                        <a onClick={() => firebase.analytics().logEvent('contact_instagram_click')} href="https://instagram.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
+                        <a onClick={() => logEvent(analytics, 'contact_instagram_click')} href="https://instagram.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
                             <SocialImg className="mx-auto d-block" src="images/instagram.svg?sanitize=true" alt="Instagram" />
                         </a>
                     </DivSocial>
@@ -74,10 +73,10 @@ function Contact() {
                 <Div30>
                     <Text>{t('contact.whats')}</Text>
                     <DivWhats>
-                        <LinkRR onClick={() => firebase.analytics().logEvent('contact_cel_formiga_click')} href="tel:+5551993982897">
+                        <LinkRR onClick={() => logEvent(analytics, 'contact_cel_formiga_click')} href="tel:+5551993982897">
                             +55 (51) 99398-2897 (Formiga)
                         </LinkRR>
-                        <LinkRR onClick={() => firebase.analytics().logEvent('contact_cel_will_click')} href="tel:+5551991374096">
+                        <LinkRR onClick={() => logEvent(analytics, 'contact_cel_will_click')} href="tel:+5551991374096">
                             +55 (51) 99137-4096 (Will)
                         </LinkRR>
                     </DivWhats>
