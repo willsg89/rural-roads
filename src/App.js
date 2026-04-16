@@ -20,6 +20,8 @@ const StyledNavbar = styled(Navbar)`
   background-color: #2e2e2e;
   font-family: "Gunplay", sans-serif;
   font-size: large;
+  padding-left: 16px;
+  padding-right: 16px;
 `;
 
 const StyledBrand = styled(Navbar.Brand)`
@@ -28,7 +30,8 @@ text-shadow: 2px 2px #000000;
 padding: 0;
 display: flex;
 align-items: center;
-color: rgba(181,26,1,1) !important;
+color: rgba(255,255,255,1) !important;
+// color: rgba(163,60,44,1) !important;
 `;
 
 const StyledNavDropdown  = styled(NavDropdown)`

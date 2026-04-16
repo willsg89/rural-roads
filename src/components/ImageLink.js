@@ -25,7 +25,7 @@
 
 const ImageLink = (props) => {
   return (<a href={props.href} className={props.aClass} target="_blank" rel="noreferrer" >
-    <img className={`mx-auto d-block ${props.imgClass}`} src={props.src} alt={props.alt} />
+    <img className={`mx-auto d-block ${props.imgClass}`} src={props.src} alt={props.alt} loading="lazy" />
   </a>);
 }
 

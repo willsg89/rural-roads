@@ -62,10 +62,10 @@ function Contact() {
                     <Text>{t('contact.social')}</Text>
                     <DivSocial>
                         <LinkMargin onClick={() => logEvent(analytics, 'contact_facebook_click')} href="https://facebook.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
-                            <SocialImg className="mx-auto d-block" src="images/facebook.svg?sanitize=true" alt="Facebook" />
+                            <SocialImg className="mx-auto d-block" src="images/facebook.svg?sanitize=true" alt="Facebook" loading="lazy"/>
                         </LinkMargin>
                         <a onClick={() => logEvent(analytics, 'contact_instagram_click')} href="https://instagram.com/RuralRoadsBand" target="_blank" rel="noreferrer" >
-                            <SocialImg className="mx-auto d-block" src="images/instagram.svg?sanitize=true" alt="Instagram" />
+                            <SocialImg className="mx-auto d-block" src="images/instagram.svg?sanitize=true" alt="Instagram" loading="lazy"/>
                         </a>
                     </DivSocial>
                 </Div30>
